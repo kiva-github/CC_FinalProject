@@ -329,6 +329,10 @@ class Location {
 			weatherClassObj.haze();
 		} else if (this.weather == "smoke"){
 			weatherClassObj.haze();
+		} else if (this.weather == "snow"){
+			weatherClassObj.snow();
+		} else if (this.weather == "light snow"){
+			weatherClassObj.snow();
 		} else if (this.weather == "thunderstorm with rain"){
 			weatherClassObj.thunderstorm();
 		} else {
@@ -461,6 +465,8 @@ class Weather {
 
 			// loop through snowflakeArray, show them, then update them
 			for (i = 0; i < snowflakeArray.length; i++) {
+				fill(255);
+				noStroke();
 				snowflakeArray[i].update(t); // update Snowflake position
 				snowflakeArray[i].display(); // show Snowflake
 			}
@@ -681,6 +687,10 @@ class Button {
 			weatherClassObj.haze();
 		} else if (this.weatherDescription == "smoke"){
 			weatherClassObj.haze();
+		} else if (this.weatherDescription == "snow"){
+			weatherClassObj.snow();
+		} else if (this.weatherDescription == "light snow"){
+			weatherClassObj.snow();
 		} else if (this.weatherDescription == "thunderstorm with rain"){
 			weatherClassObj.thunderstorm();
 		} else {
