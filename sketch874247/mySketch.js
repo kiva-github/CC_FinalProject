@@ -301,29 +301,29 @@ class Location {
 		// conditionals for displaying weather based on weather description
 		if (this.weather == "clear sky"){
 			weatherClassObj.clearSky();
+		} else if (this.weather == "few clouds"){
+			weatherClassObj.clouds("few clouds");
 		} else if (this.weather == "scattered clouds"){
 			weatherClassObj.clouds("scattered cloud");
 		} else if (this.weather == "broken clouds"){
 			weatherClassObj.clouds("broken clouds");
 		} else if (this.weather == "overcast clouds"){
 			weatherClassObj.clouds("overcast clouds");
-		} else if (this.weather == "few clouds"){
-			weatherClassObj.clouds("few clouds");
-		} else if (this.weather == "light rain"){
+		}  else if (this.weather == "light rain"){
 			weatherClassObj.rain("light rain");
 		} else if (this.weather == "light intensity drizzle"){
 			weatherClassObj.rain("light rain");
+		} else if (this.weather == "light intensity rain"){
+			weatherClassObj.rain("light rain");
+		} else if (this.weather == "moderate rain"){
+			weatherClassObj.rain("moderate rain");
 		} else if (this.weather == "shower rain"){
 			weatherClassObj.rain("shower rain");
 		} else if (this.weather == "very heavy rain"){
 			weatherClassObj.rain("heavy rain");
-		} else if (this.weather == "moderate rain"){
-			weatherClassObj.rain("moderate rain");
-		} else if (this.weather == "heavy intensity rain"){
+		}  else if (this.weather == "heavy rain"){
 			weatherClassObj.rain("heavy intensity rain");
-		} else if (this.weather == "light intensity rain"){
-			weatherClassObj.rain("light rain");
-		} else if (this.weather == "haze"){
+		}  else if (this.weather == "haze"){
 			weatherClassObj.haze();
 		} else if (this.weather == "mist"){
 			weatherClassObj.haze();
@@ -653,40 +653,38 @@ class Button {
 	displayWeather(){
 		if (this.weatherDescription == "clear sky"){
 			weatherClassObj.clearSky();
+		} else if (this.weatherDescription == "few clouds"){
+			weatherClassObj.clouds("few clouds");
 		} else if (this.weatherDescription == "scattered clouds"){
-			weatherClassObj.clouds("scattered clouds");
+			weatherClassObj.clouds("scattered cloud");
 		} else if (this.weatherDescription == "broken clouds"){
 			weatherClassObj.clouds("broken clouds");
 		} else if (this.weatherDescription == "overcast clouds"){
 			weatherClassObj.clouds("overcast clouds");
-		} else if (this.weatherDescription == "few clouds"){
-			weatherClassObj.clouds("few clouds");
-		} else if (this.weatherDescription == "light rain"){
+		}  else if (this.weatherDescription == "light rain"){
 			weatherClassObj.rain("light rain");
-		} else if (this.weatherDescription == "shower rain"){
-			weatherClassObj.rain();
-		} else if (this.weatherDescription == "very heavy rain"){
-			weatherClassObj.rain("heavy rain");
-		} else if (this.weatherDescription == "moderate rain"){
-			weatherClassObj.rain("shower rain");
-		} else if (this.weatherDescription == "heavy intensity rain"){
-			weatherClassObj.rain();
-		} else if (this.weatherDescription == "heavy intensity rain"){
-			weatherClassObj.rain();
+		} else if (this.weatherDescription == "light intensity drizzle"){
+			weatherClassObj.rain("light rain");
 		} else if (this.weatherDescription == "light intensity rain"){
 			weatherClassObj.rain("light rain");
+		} else if (this.weatherDescription == "moderate rain"){
+			weatherClassObj.rain("moderate rain");
+		} else if (this.weatherDescription == "shower rain"){
+			weatherClassObj.rain("shower rain");
+		} else if (this.weatherDescription == "very heavy rain"){
+			weatherClassObj.rain("heavy rain");
+		}  else if (this.weatherDescription == "heavy intensity rain"){
+			weatherClassObj.rain("heavy rain");
+		}  else if (this.weatherDescription == "haze"){
+			weatherClassObj.haze();
 		} else if (this.weatherDescription == "mist"){
 			weatherClassObj.haze();
-		} else if (this.weatherDescription == "haze"){
+		} else if (this.weatherDescription == "smoke"){
 			weatherClassObj.haze();
 		} else if (this.weatherDescription == "thunderstorm with rain"){
 			weatherClassObj.thunderstorm();
-		} else if (this.weatherDescription == "snow"){
-			weatherClassObj.snow();
-		}	else if (this.weatherDescription == "smoke"){
-			print("add smoking display");
-		}	else {
-			print("weather is undefined");
+		} else {
+			print(this.name + "'s weather is undefined");
 		}
 	}
 	
